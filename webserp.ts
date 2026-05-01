@@ -9,7 +9,7 @@ export default function (pi: ExtensionAPI) {
   pi.registerTool({
     name: "webserp_search",
     label: "WebSerp Search",
-    description: "Search the web using webserp (excluding Google and Bing). Deduplicates results and returns JSON.",
+    description: "Search the web using webserp (excluding Google and Bing). Deduplicates results and returns JSON. Do not run more than 2 searches simultaneously.",
     parameters: Type.Object({
       query: Type.String({ description: "Search query" }),
       maxResults: Type.Optional(Type.Number({ description: "Maximum results per engine (default 75)" }))
